@@ -37,7 +37,7 @@ public class Calculator extends JFrame implements ActionListener{
 		super("CALCULATOR");
 		init();
 		setPreferredSize(new Dimension(350, 420));  
-	    setVisible(true);
+	        setVisible(true);
 		setResizable(false);               //设置窗口大小不可变
 		pack();	                           // 调整外部容器大小
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,28 +48,28 @@ public class Calculator extends JFrame implements ActionListener{
 		text.setEditable(false);
 		text.setBackground(new Color(135,206,235));
 		text.setFont(new Font("alias",Font.BOLD,35));
-	    Font f=new Font("alias",Font.BOLD,20);
+	        Font f=new Font("alias",Font.BOLD,20);
 	    
 		JPanel KEYPanel=new JPanel();            //数值键
-	    KEYPanel.setLayout(new GridLayout(6,4,0,0));
-	    KEYPanel.setSize(340,300);
+	        KEYPanel.setLayout(new GridLayout(6,4,0,0));
+	        KEYPanel.setSize(340,300);
 		for(int i=0;i<KEYS.length;i++) {
 			Keys[i]=new JButton(KEYS[i]);
 			KEYPanel.add(Keys[i]);
 			if(i==0||i==1||i==2||i==3||i==7||i==11||i==15||i==19||i==23)
 			    Keys[i].setForeground(new Color(135,206,235));   
 			else
-				Keys[i].setForeground(Color.GRAY);
+			    Keys[i].setForeground(Color.GRAY);
 			Keys[i].setFont(f);
-		    Keys[i].setPreferredSize(new Dimension(85,50));  // 设置大小
-	        Keys[i].setMargin(null);    //去边界
+		        Keys[i].setPreferredSize(new Dimension(85,50));  // 设置大小
+	                Keys[i].setMargin(null);    //去边界
 			Keys[i].setVisible(true);
 			
 		}
 
 		JPanel MPanel=new JPanel();     //M系列键
-		 MPanel.setLayout(new GridLayout(1,5,0,0));
-		 MPanel.setSize(350,50);
+		MPanel.setLayout(new GridLayout(1,5,0,0));
+		MPanel.setSize(350,50);
 		for(int i=0;i<M.length;i++) {
 			m[i]=new JButton(M[i]);
 			MPanel.add(m[i]);
@@ -118,13 +118,13 @@ public class Calculator extends JFrame implements ActionListener{
     	FirstDigit=false;
     	String s=text.getText();
     	double d=Double.parseDouble(s);
-    cache=cache+d;
+        cache=cache+d;
 	}
     private void  HM0() {
       	FirstDigit=false;
       	String s=text.getText();
       	double d=Double.parseDouble(s);
-	    cache=cache-d;
+	cache=cache-d;
 	}
     private void  HMS() {
     	 String s=text.getText();
@@ -132,7 +132,7 @@ public class Calculator extends JFrame implements ActionListener{
     	 if(n==-1) {
     		 double d=Double.parseDouble(s);
     		 cache=d;
-    	     text.setText("M");
+    	         text.setText("M");
     	 }
     	 else
     	 {
